@@ -11,6 +11,7 @@ protocol CheckWeather {
     func requestWeather(_ cityName: String)
 }
 
+
 class GetWeather: CheckWeather {
     func requestWeather(_ cityName: String) {
         let urlString = "https://api.apixu.com/v1/current.json?key=c5d57f8a831c4dde8fd153715180512&q=\(cityName)"

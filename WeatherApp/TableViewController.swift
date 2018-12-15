@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-//    var weather: Weather = 
+//    var weather: Weather =
     var arr = ["pogoda", "rutka"]
 
     override func viewDidLoad() {

@@ -12,8 +12,9 @@ class SecondViewController: UIViewController {
 
     let checkWeather: CheckWeather = GetWeather()
 
+    @IBOutlet weak var cityNameTextField: UITextField!
     @IBAction func getWeatherButton(_ sender: UIButton) {
-        checkWeather.requestWeather("Kiev")
+        checkWeather.requestWeather(cityNameTextField.text!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

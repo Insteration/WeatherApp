@@ -61,7 +61,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0yb-eM-RqZ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="HeB-SZ-HWy">
+                        <barButtonItem key="rightBarButtonItem" title="Input city" id="HeB-SZ-HWy">
                             <connections>
                                 <segue destination="T70-tI-JQa" kind="show" id="fra-6A-cRj"/>
                             </connections>
@@ -83,18 +83,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input city name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-oh-TEk">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gli-Vs-5XS">
-                                <rect key="frame" x="155" y="151" width="46" height="222"/>
+                                <rect key="frame" x="139" y="356" width="97" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get weather">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="getWeatherButton:" destination="T70-tI-JQa" eventType="touchUpInside" id="KOD-aO-npg"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Ua-oh-TEk" firstAttribute="leading" secondItem="waN-7N-T1p" secondAttribute="leading" constant="16" id="36K-1L-oXi"/>
+                            <constraint firstItem="3Ua-oh-TEk" firstAttribute="centerY" secondItem="9zg-bW-jkx" secondAttribute="centerY" id="KHT-ib-TEr"/>
+                            <constraint firstItem="3Ua-oh-TEk" firstAttribute="centerX" secondItem="9zg-bW-jkx" secondAttribute="centerX" id="KIb-wg-TyY"/>
+                            <constraint firstItem="waN-7N-T1p" firstAttribute="trailing" secondItem="3Ua-oh-TEk" secondAttribute="trailing" constant="16" id="Mjv-eW-Ul6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="waN-7N-T1p"/>
                     </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="3Ua-oh-TEk" id="e1s-vp-Wok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxp-Gq-b5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

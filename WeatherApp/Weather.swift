@@ -11,8 +11,8 @@ import Foundation
 class Weather: Codable {
     private let lastUpdatedEpoch: Int
     private let lastUpdated: String
-    private let tempC: Int
-    private let tempF: Double
+    let tempC: Int
+    let tempF: Double
     private let isDay: Int
     private let condition: Condition
     private let windMph, windKph: Double
@@ -24,7 +24,7 @@ class Weather: Codable {
     private let feelslikeC, feelslikeF, visKM: Double
     private let visMiles, uv: Int
     
-    private enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case lastUpdatedEpoch = "last_updated_epoch"
         case lastUpdated = "last_updated"
         case tempC = "temp_c"

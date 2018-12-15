@@ -9,7 +9,7 @@
 import Foundation
 
 class Location: Codable {
-    private let name, region, country: String
+     let name, region, country: String
     private let lat, lon: Double
     private let tzID: String
     private let localtimeEpoch: Int
@@ -17,7 +17,7 @@ class Location: Codable {
     
     
     
-    private enum CodingKeys: String, CodingKey {
+     enum CodingKeys: String, CodingKey {
         case name, region, country, lat, lon
         case tzID = "tz_id"
         case localtimeEpoch = "localtime_epoch"
